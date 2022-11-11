@@ -1,0 +1,34 @@
+type: window # single|window, maybe add opt
+key: session_based_retailrocket #added to the csv names
+evaluation: evaluation #evaluation|evaluation_last|evaluation_multiple
+data:
+  name: retailrocket #added in the end of the csv names
+  folder: data/retailrocket/slices/
+  prefix: events
+  slices: 5 #only window
+  skip: [] #only window
+  opts: {sessions_test: 100000000}
+
+results:
+  folder: results/session-based/retail/
+
+metrics:
+- class: accuracy.HitRate
+  length: [10,20]
+- class: accuracy.MRR
+  length: [10,20]
+- class: accuracy_multiple.MAP
+  length: [10,20]
+
+
+algorithms:
+- class: narm.narm.NARM
+  params: { epochs: 20, lr: 0.007, hidden_units: 100, factors: 100 }
+  key: narm
+- class: CSRM.csrm.CSRM
+  params: { hidden_units: 100, epoch: 10, lr: 0.001, memory_size: 128}
+  key: csrm
+
+- class: sgnn.gnn.GGNN
+  params: { hidden_size: 100, out_size: 100, step: 1, nonhybrid: True, batch_size: 100, epoch_n: 10, batch_predict: True, lr: 0.006, l2: 3.00E-05, lr_dc: 0.36666667, lr_dc_step: 3}
+  key: sgnn
