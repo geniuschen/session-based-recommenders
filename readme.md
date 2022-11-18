@@ -1,6 +1,6 @@
 # Session-based-recommenders
 ## Introduction
-This repository was forked from the [rn5l/session-rec](https://github.com/rn5l/session-rec) repo. Our goal was to provide a script to run experiments and provide some benchmarks for different recommendation algorithms, mainly we were interested in benchmarking the CSRM, SR-GNN, and the NARM recommenders.We test our result on retailrocket dataset and diginetica dataset.
+This repository was forked from the [rn5l/session-rec](https://github.com/rn5l/session-rec) repo. Our goal was to provide a script to run experiments and provide some benchmarks for different recommendation algorithms, mainly we were interested in benchmarking the GRU, CSRM, SR-GNN, and the NARM recommenders.We test our result on retailrocket dataset and diginetica dataset.
 <div>
 <table class="table table-hover table-bordered">
     <tr>
