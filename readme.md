@@ -9,6 +9,12 @@ This repository was forked from the [rn5l/session-rec](https://github.com/rn5l/s
         <th width="68%" class="conf" scope="col">Description</th>
     </tr>
     <tr>
+        <td scope="row">GRU</td>
+        <td>gru4rec.py</td>
+        <td>Hidasi et al., Recurrent Neural Networks with Top-k Gains for Session-based Recommendations, CIKM 2018.<br>
+        </td>
+    </tr>
+    <tr>
         <td scope="row">CSRM</td>
         <td>csrm.py</td>
         <td>Wang et al., A collaborative session-based recommendation approach with parallel memory modules, SIGIR 2019.<br>
