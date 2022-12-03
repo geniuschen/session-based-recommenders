@@ -9,9 +9,9 @@ This repository was forked from the [rn5l/session-rec](https://github.com/rn5l/s
         <th width="68%" class="conf" scope="col">Description</th>
     </tr>
     <tr>
-        <td scope="row">GRU</td>
-        <td>gru4rec.py</td>
-        <td>Hidasi et al., Recurrent Neural Networks with Top-k Gains for Session-based Recommendations, CIKM 2018.<br>
+        <td scope="row">GRU-PRL</td>
+        <td>GRU_PRL_RC15.py&GRU_PRL_RETAIL.py</td>
+        <td>Xin et al., Rethinking Reinforcement Learning for Recommendation: A Prompt Perspective, Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval 2022.<br>
         </td>
     </tr>
     <tr>
@@ -150,7 +150,7 @@ An NVIDIA GPU
 
 5. Datasets can be downloaded from: https://drive.google.com/drive/folders/1ritDnO_Zc6DFEU6UND9C8VCisT0ETVp5?usp=sharing
 
-Download retailrocket dataset and diginetica dataset.
+Download retailrocket dataset, diginetica dataset and rsc15 dataset.
 
 6. Unzip file and move it to data folder.
 
@@ -162,6 +162,12 @@ retailrocket:
 
 events.csv should be placed in `data/retailrocket/raw`
 
+rsc15:
+
+yoochoose-clicks.dat and yoochoose-buys.dat should be placed in `data/rsc15/raw`
+
+
+
 
 7. Preprocess data by running a configuration with the following command:
 
@@ -169,12 +175,24 @@ retailrocket:
 
     ```
     python run_preprocessing.py conf/preprocess/session_based/window/retailrocket.yml 
+    python preprocess_gru_prl_retail.py 
+    python split_data_retail.py
+    python trajectory_buffer_retail.py
     ```
 
 diginetica:
 
     ```
     python run_preprocessing.py conf/preprocess/session_based/window/diginetica.yml
+    ```
+
+rsc15:
+
+    ```
+    python sample_data_rsc15.py 
+    python merge_and_sort_rsc15.py
+    python trajectory_buffer_rsc15.py
+    python split_data_rsc15.py
     ```
 
 
@@ -186,11 +204,23 @@ retailrocket:
     THEANO_FLAGS="device=cuda0,floatX=float32" CUDA_DEVICE_ORDER=PCI_BUS_ID python run_config.py conf/exp_retailrocket_models.yml conf/out
     ```
 
+    ```
+    python GRU_PRL_RETAIL.py --data ./data/retailrocket/raw
+    ```
+
+
 diginetica:
 
     ```
     THEANO_FLAGS="device=cuda0,floatX=float32" CUDA_DEVICE_ORDER=PCI_BUS_ID python run_config.py conf/exp_diginetica_models.yml conf/out
     ```
+
+rsc15:
+
+    ```
+    python GRU_PRL_RC15.py --data ./data/rsc15/raw
+    ```
+
 
 9. Check result in results directory.
 <!-- Example of configuration
