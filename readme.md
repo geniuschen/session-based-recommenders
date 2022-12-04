@@ -9,6 +9,12 @@ This repository was forked from the [rn5l/session-rec](https://github.com/rn5l/s
         <th width="68%" class="conf" scope="col">Description</th>
     </tr>
     <tr>
+        <td scope="row">Gru4Rec</td>
+        <td>gru4rec.py</td>
+        <td>Hidasi et al., Recurrent Neural Networks with Top-k Gains for Session-based Recommendations, CIKM 2018.<br>
+        </td>
+    </tr>
+    <tr>
         <td scope="row">GRU-PRL</td>
         <td>GRU_PRL_RC15.py&GRU_PRL_RETAIL.py</td>
         <td>Xin et al., Rethinking Reinforcement Learning for Recommendation: A Prompt Perspective, Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval 2022.<br>
