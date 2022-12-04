@@ -2,7 +2,7 @@ import os
 
 import numpy as np
 import pandas as pd
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from utility_RETAIL import pad_history, to_pickled_df
 
