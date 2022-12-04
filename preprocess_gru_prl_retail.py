@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from utility import to_pickled_df
 
 if __name__ == '__main__':
-    data_directory = 'data'
+    data_directory = 'data/retailrocket/raw'
     event_df = pd.read_csv(os.path.join(data_directory, 'events.csv'), header=0)
     event_df.columns = ['timestamp','session_id','behavior','item_id','transid']
     ###remove transid column

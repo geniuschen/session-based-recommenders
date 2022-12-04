@@ -245,6 +245,11 @@ rsc15:
 
 8. Run training and evaluation
 
+    ```
+    mkdir -p ./log/GRU
+    ```
+
+
 retailrocket:
 
     ```

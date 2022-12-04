@@ -2,8 +2,8 @@ import os
 
 import numpy as np
 import pandas as pd
-import tensorflow as tf
-from utility import pad_history, to_pickled_df
+import tensorflow.compat.v1 as tf
+from utility_RC15 import pad_history, to_pickled_df
 
 flags = tf.app.flags
 FLAGS = flags.FLAGS

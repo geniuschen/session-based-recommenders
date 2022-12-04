@@ -2,7 +2,7 @@ import os
 
 import numpy as np
 import pandas as pd
-from utility import to_pickled_df
+from utility_RC15 import to_pickled_df
 
 if __name__ == '__main__':
     data_directory = 'data/rsc15/raw'

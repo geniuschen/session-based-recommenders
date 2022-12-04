@@ -1,11 +1,12 @@
 import os
+
 import numpy as np
 import pandas as pd
-from utility import to_pickled_df
 
+from utility_RETAIL import to_pickled_df
 
 if __name__ == '__main__':
-    data_directory = 'data'
+    data_directory = 'data/retailrocket/raw'
     # sampled_buys=pd.read_pickle(os.path.join(data_directory, 'sampled_buys.df'))
     #
     # buy_sessions=sampled_buys.session_id.unique()
