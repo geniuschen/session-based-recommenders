@@ -1,14 +1,12 @@
 import os
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from utility import to_pickled_df
 
-
-
 if __name__ == '__main__':
-    data_directory = 'data'
+    data_directory = 'data/rsc15/raw'
     click_df = pd.read_csv(os.path.join(data_directory, 'yoochoose-clicks.dat'), header=None)
     click_df.columns = ['session_id', 'timestamp', 'item_id','category']
     click_df['valid_session'] = click_df.session_id.map(click_df.groupby('session_id')['item_id'].size() > 2)

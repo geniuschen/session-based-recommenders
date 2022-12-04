@@ -3,7 +3,7 @@ import os
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from utility import to_pickled_df, pad_history
+from utility import pad_history, to_pickled_df
 
 flags = tf.app.flags
 FLAGS = flags.FLAGS
@@ -16,7 +16,7 @@ flags.DEFINE_float('discount', 1.0, 'discount factor for RL')
 
 if __name__ == '__main__':
 
-    data_directory = 'data'
+    data_directory = 'data/rsc15/raw'
 
     length = FLAGS.history_length
     reward_click = FLAGS.reward_click

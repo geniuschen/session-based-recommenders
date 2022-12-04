@@ -3,9 +3,8 @@ import os
 import pandas as pd
 from utility import to_pickled_df
 
-
 if __name__ == '__main__':
-    data_directory = 'data'
+    data_directory = 'data/rsc15/raw'
 
     sampled_clicks = pd.read_pickle(os.path.join(data_directory, 'sampled_clicks.df'))
     sampled_buys=pd.read_pickle(os.path.join(data_directory, 'sampled_buys.df'))

@@ -188,13 +188,20 @@ An NVIDIA GPU
     conda activate srec37
     ```
 
-5. Datasets can be downloaded from: https://drive.google.com/drive/folders/1ritDnO_Zc6DFEU6UND9C8VCisT0ETVp5?usp=sharing
+5. Datasets can be downloaded from: https://drive.google.com/drive/folders/1ritDnO_Zc6DFEU6UND9C8VCisT0ETVp5?usp=sharing (retailrocket dataset, diginetica dataset) and https://s3-eu-west-1.amazonaws.com/yc-rdata/yoochoose-data.7z (rsc15 dataset).
+
+
 
 Download retailrocket dataset, diginetica dataset and rsc15 dataset.
 
 6. Unzip file and move it to data folder.
 
 diginetica:
+
+    ```
+    mkdir -p ./data/diginetica/raw ./data/retailrocket/raw ./data/rsc15/raw
+    ```
+
 
 train-item-views.csv should be placed in `data/diginetica/raw`
 
