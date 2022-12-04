@@ -1,6 +1,30 @@
 # Session-based-recommenders
 ## Introduction
-This repository was forked from the [rn5l/session-rec](https://github.com/rn5l/session-rec) repo. Our goal was to provide a script to run experiments and provide some benchmarks for different recommendation algorithms, mainly we were interested in benchmarking the GRU, CSRM, SR-GNN, and the NARM recommenders.We test our result on retailrocket dataset and diginetica dataset.
+This repository was forked from the [rn5l/session-rec](https://github.com/rn5l/session-rec) repo. Our goal was to provide a script to run experiments and provide some benchmarks for different recommendation algorithms, mainly we were interested in benchmarking the Gru4Rec, GRU-PRL(from DRL3), CSRM, SR-GNN, and the NARM recommenders.We test our result on retailrocket dataset, diginetica dataset and RecSys Challange 2015 dataset.
+
+### Contribution
+All the code and experiment are implemented and conducted by chen.
+
+### How we evaluate and compare the model performance
+We evaluate the model performance by some metrics. For Gru4Rec, CSRM, SR-GNN, and the NARM we use HitRate, MRR and MAP for evaluation. For GRU-PRL we use HitRate and NDCG for evaluation.
+
+HR@L (Hit Ratio @ L):In recommender settings, the hit ratio is simply the fraction of users for which the correct answer is included in the recommendation list of length L(Top-L).
+
+MRR (Mean Reciprocal Rank): MRR is short for mean reciprocal rank. It is also known as average reciprocal hit ratio (ARHR).
+
+MAP (Mean Average Precision): MAP is the mean of Average Precision. If we have the AP for each user, it is trivial just to average it over all users to calculate the MAP.
+
+NDCG(Normalized Discounted Cumulative Gain):NDCG stands for normalized discounted cumulative gain. 
+
+@K : top-K recommendations [Result](#Result)
+
+The final results is shown in 
+
+
+### How we set up the experiments
+Check [Getting Started](#Getting-Started)
+### Algorithm
+
 <div>
 <table class="table table-hover table-bordered">
     <tr>
@@ -40,12 +64,6 @@ This repository was forked from the [rn5l/session-rec](https://github.com/rn5l/s
     </tr>
 </table>
 </div>
-
-<!-- Deadline: 12/15/2022 -->
-## Task
-
-Train different session (contextual, sequential) based product recommendation
-recommenders for E-commerce use case and compare the performance of the recommenders.
 
 
 ## Result
@@ -172,7 +190,7 @@ CUDA 11.6
 
 An NVIDIA GPU
 
-### Installation
+### Start
 
 1. Download and Install Anaconda (https://www.anaconda.com/distribution/)
 2. Go to our session-based-recommenders repository
