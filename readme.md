@@ -64,65 +64,99 @@ recommenders for E-commerce use case and compare the performance of the recommen
         <tr>
             <td>GRU</td>
             <td>RetailRocket</td>
-            <td>0.575222954633578
-            <td>0.317998691364181
-            <td>0.305137478200707
+            <td>0.575222
+            <td>0.317998
+            <td>0.305137
             </td>
         </tr>
         <tr>
             <td>GRU</td>
             <td>Diginetica</td>
-            <td>0.456242649941199
-            <td>0.160353816613719
-            <td>0.145559374947355
+            <td>0.456242
+            <td>0.160353
+            <td>0.145559
             </td>
         </tr>
         <tr>
             <td>SR-GNN</td>
             <td>RetailRocket</td>
-            <td>0.481872818922062
-            <td>0.261930399859539
-            <td>0.250933278906411
+            <td>0.481872
+            <td>0.261930
+            <td>0.250933
             </td>
         </tr>
         <tr>
             <td>SR-GNN</td>
             <td>Diginetica</td>
-            <td>0.337710701685613
-            <td>0.118414756337152
-            <td>0.107449959069729
+            <td>0.337710
+            <td>0.118414
+            <td>0.107449
             </td>
         </tr>
         <tr>
             <td>CSRM</td>
             <td>RetailRocket</td>
-            <td>0.5282086079875921
-            <td>0.28017071917987535
-            <td>0.2677688247394867
+            <td>0.528208
+            <td>0.280170
+            <td>0.267768
             </td>
         </tr>
         <tr>
             <td>CSRM</td>
             <td>Diginetica</td>
-            <td>0.392272638181105
-            <td>0.130038309859531
-            <td>0.116926593443457
+            <td>0.392272
+            <td>0.130038
+            <td>0.116926
             </td>
         </tr>
         <tr>
             <td>NARM</td>
             <td>RetailRocket</td>
-            <td>0.559034509499806
-            <td>0.307978499374293
-            <td>0.295425698868014
+            <td>0.559034
+            <td>0.307978
+            <td>0.295425
             </td>
         </tr>
         <tr>
             <td>NARM</td>
             <td>Diginetica</td>
-            <td>0.437941003528028
-            <td>0.152351861021737
-            <td>0.138072403896433
+            <td>0.437941
+            <td>0.152351
+            <td>0.138072
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+<div>
+<div>
+    <table class="table table-hover table-bordered">
+        <tr>
+            <th width="12%" scope="col"> Recommender</th>
+            <th width="16%" class="conf" scope="col">Dataset</th>
+            <th width="16%" class="conf" scope="col">Purchase:HitRate@20</th>
+            <th width="16%" class="conf" scope="col">Purchase:NDCG@20</th>
+            <th width="16%" class="conf" scope="col">Click:HitRate@20</th>
+            <th width="16%" class="conf" scope="col">Click:NDCG@20</th>
+        </tr>
+        <tr>
+            <td>GRU_PRL</td>
+            <td>RetailRocket</td>
+            <td>0.642403
+            <td>0.374605
+            <td>0.469645
+            <td>0.257799
+            </td>
+        </tr>
+        <tr>
+            <td>GRU_PRL</td>
+            <td>RSC15</td>
+            <td>0.555991
+            <td>0.392822
+            <td>0.347951
+            <td>0.218077
             </td>
         </tr>
     </table>
